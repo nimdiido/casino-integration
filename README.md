@@ -8,12 +8,12 @@ This project implements a real-world integration between an online casino platfo
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                              CASINO PLATFORM                                 │
+│                              CASINO PLATFORM                                │
 │  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────────────────┐  │
 │  │  Game Session   │  │  Wallet Service │  │  Transaction Processor      │  │
 │  │    Manager      │  │                 │  │  (Idempotent & Atomic)      │  │
 │  └─────────────────┘  └─────────────────┘  └─────────────────────────────┘  │
-│                              │                                               │
+│                              │                                              │
 │  Headers: x-casino-signature │ CASINO_SECRET                                │
 └──────────────────────────────┼──────────────────────────────────────────────┘
                                │
@@ -24,8 +24,8 @@ This project implements a real-world integration between an online casino platfo
                                │
 ┌──────────────────────────────┼──────────────────────────────────────────────┐
 │  Headers: x-provider-signature │ PROVIDER_SECRET                            │
-│                              │                                               │
-│                        GAME PROVIDER                                         │
+│                              │                                              │
+│                        GAME PROVIDER                                        │
 │  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────────────────┐  │
 │  │   Game Engine   │  │  Round Manager  │  │      API Client             │  │
 │  │                 │  │                 │  │  (Calls Casino APIs)        │  │
